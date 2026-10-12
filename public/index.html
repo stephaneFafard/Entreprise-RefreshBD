@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Refresh Local BD</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Refresh Local BD</h1>
+    <p class="subtitle">Bases MariaDB locales — mise à jour à partir de la production</p>
+
+    <div id="message" class="message" hidden></div>
+
+    <table>
+      <thead>
+        <tr>
+          <th class="col-check"><input type="checkbox" id="select-all" aria-label="Tout sélectionner"></th>
+          <th>Nom de la BD</th>
+          <th>Dernière synchronisation</th>
+        </tr>
+      </thead>
+      <tbody id="db-rows">
+        <tr><td colspan="3" class="placeholder">Scan des bases locales…</td></tr>
+      </tbody>
+    </table>
+
+    <div class="actions">
+      <button type="button" id="sync-btn" disabled>Synchroniser</button>
+    </div>
+
+    <section id="progress" class="progress" hidden>
+      <h2>Synchronisation</h2>
+      <ul id="progress-list"></ul>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
